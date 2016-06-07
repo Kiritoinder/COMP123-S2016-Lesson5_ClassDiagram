@@ -8,6 +8,7 @@ namespace COMP213_S2016_Lesson5
 {
     /**
      * this class is the "driver" class for our program
+     * @class program
      */
     public class Program
     {
@@ -21,39 +22,7 @@ namespace COMP213_S2016_Lesson5
         public static void Main(string[] args)
         {
             //create instance of student
-            Student Inder = new Student("Inder", 18, "300874118");
-
-            Inder._sayHello();
-
-            Console.WriteLine();
-            Inder.Studies();
-
-
-            Inder.Courses.Add(new Course("comp123", "programming 2"));
-            Inder.ShowCourses();
-            Console.WriteLine();
-
-
-            //Create instance of teacher class
-            Teacher tom = new Teacher("Tom", 47, "123456789");
-            tom._sayHello();
-            Console.WriteLine();
-            tom.Teaches();
-
-            List<string> names = new List<string>();
-            names.Add("Inder");
-            names.Add("Abhi");
-
-            int count = 0;
-            Console.WriteLine();
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++");
-            foreach (string name in names)
-            {
-                Console.WriteLine("name #" + count + " is " + name);
-                count++;
-            }
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++");
-
+            
             List<Card> Deck = new List<Card>();
 
 
