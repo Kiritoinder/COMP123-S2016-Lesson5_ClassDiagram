@@ -15,20 +15,17 @@ namespace COMP213_S2016_Lesson5
         /**
          * the main method for driver class
          * 
-         * @method main
-         * @parm {string[]} args
+         * @method Main
+         * @param {sting[]}args
+         * @returns {void}
          */
-
         public static void Main(string[] args)
         {
-            //create instance of student
-            
             List<Card> Deck = new List<Card>();
 
-
             CreateDeck(Deck);
+            DisplayDeck(Deck);
         }
-
         public static void CreateDeck(List<Card> deck)
         {
             string suit = "";
@@ -59,13 +56,22 @@ namespace COMP213_S2016_Lesson5
                 }
             }
 
+        } // end Main
 
-            /**       MyList myList = new MyList();
-                   myList.Add(1);
-                   myList.Add(5);
-                   myList.Clear();
-                   myList.Print();  */
+        public static void DisplayDeck(List<Card> deck)
+        {
+            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++");
+            Console.WriteLine("+Curernt Deck                         +");
+            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++");
+
+            foreach (Card card in deck)
+            {
+                Console.WriteLine("{0} of {1}", card.Face, card.Suit);
+            }
+            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++");
+
         }
-    }
-}
 
+    } // end Program
+
+} // end namespace
