@@ -21,72 +21,22 @@ namespace COMP213_S2016_Lesson5
          */
         public static void Main(string[] args)
         {
-            List<Card> Deck = new List<Card>();
 
-            CreateDeck(Deck);
-            DisplayDeck(Deck);
-            ShuffleDeck(Deck);
-            DisplayDeck(Deck);
-        }
-        public static void CreateDeck(List<Card> deck)
-        {
-            string suit = "";
-            for (int i = 0; i < 4; i++)
-            {
-                switch (i)
-                {
-                    case 0:
-                        suit = "hearts";
-                        break;
-                    case 1:
-                        suit = "clubs";
-                        break;
-                    case 2:
-                        suit = "diamonds";
-                        break;
-                    case 3:
-                        suit = "spades";
-                        break;
+            Deck deck = new Deck(); // create a deck of cards
+            deck.Display(); // display the initial state of the deck
+
+            deck.Shuffle(); // shuffle the deck
+            deck.Display(); // display the deck after shuffling}
 
 
-                }
-
-
-                for (int face = 1; face < 14; face++)
-                {
-                    deck.Add(new Card(face, suit));
-                }
-            }
+            Card cardDealt = deck.Deal();
+            Console.WriteLine("Card Delt: {0} of {1}", cardDealt.Face, cardDealt.Suit);
+            Console.WriteLine();
+            deck.Display();
 
         } // end Main
 
-        public static void DisplayDeck(List<Card> deck)
-        {
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++");
-            Console.WriteLine("+Curernt Deck                         +");
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++");
 
-            foreach (Card card in deck)
-            {
-                Console.WriteLine("{0} of {1}", card.Face, card.Suit);
-            }
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++");
-
-        }
-        public static void ShuffleDeck(List<Card> deck)
-        {
-            Random random = new Random();
-
-            int cardCount = deck.Count;
-
-            for(int currentCard=0;currentCard<cardCount;currentCard++)
-            {
-                Card temCard = deck[currentCard];
-                int randomCard = random.Next(0, cardCount);
-                deck[currentCard] = deck[randomCard];
-                deck[randomCard] = temCard;
-            }
-        }
 
     } // end Program
 
