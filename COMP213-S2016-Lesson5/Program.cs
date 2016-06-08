@@ -25,6 +25,8 @@ namespace COMP213_S2016_Lesson5
 
             CreateDeck(Deck);
             DisplayDeck(Deck);
+            ShuffleDeck(Deck);
+            DisplayDeck(Deck);
         }
         public static void CreateDeck(List<Card> deck)
         {
@@ -70,6 +72,20 @@ namespace COMP213_S2016_Lesson5
             }
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++++");
 
+        }
+        public static void ShuffleDeck(List<Card> deck)
+        {
+            Random random = new Random();
+
+            int cardCount = deck.Count;
+
+            for(int currentCard=0;currentCard<cardCount;currentCard++)
+            {
+                Card temCard = deck[currentCard];
+                int randomCard = random.Next(0, cardCount);
+                deck[currentCard] = deck[randomCard];
+                deck[randomCard] = temCard;
+            }
         }
 
     } // end Program
