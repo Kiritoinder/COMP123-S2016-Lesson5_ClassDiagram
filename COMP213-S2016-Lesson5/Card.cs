@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+/*
+* Author: Inderjeet Singh
+* Student Number: 300874118
+* Date: June 10, 2016
+* Date Modified: June 10, 2016
+* Description: Deal a card
+* Version: 0.0.1
+*/
 
 namespace COMP213_S2016_Lesson5
 {

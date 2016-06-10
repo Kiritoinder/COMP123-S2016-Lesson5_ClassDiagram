@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+* Author: Inderjeet Singh
+* Student Number: 300874118
+* Date: June 10, 2016
+* Date Modified: June 10, 2016
+* Description: Deal a card
+* Version: 0.0.1
+*/
 namespace COMP213_S2016_Lesson5
 {
     /**
@@ -43,9 +50,9 @@ namespace COMP213_S2016_Lesson5
         {
             string suit = "";
 
-            for (int suitIndex = 0; suitIndex < 4; suitIndex++)
+            for (int i = 0; i < 4; i++)
             {
-                switch (suitIndex)
+                switch (i)
                 {
                     case 0:
                         suit = "hearts";
@@ -84,13 +91,15 @@ namespace COMP213_S2016_Lesson5
         public void Display()
         {
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++");
-            Console.WriteLine("+ Current Deck                              +");
+            Console.WriteLine("+ Current Deck Start                        +");
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++");
             foreach (Card card in this)
             {
                 Console.WriteLine("{0} of {1}", card.Face, card.Suit);
             }
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++");
+            Console.WriteLine("*********************************************");
+            Console.WriteLine("* Current Deck Ends                         *");
+            Console.WriteLine("*********************************************");
             Console.WriteLine();
         }
 
