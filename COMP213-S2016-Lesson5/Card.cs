@@ -24,18 +24,18 @@ namespace COMP213_S2016_Lesson5
     public class Card
     {
         //PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++
-        public int Face { get; set; }
-        public string Suit { get; set; }
+        public Faces Face { get; set; }
+        public Suits Suit { get; set; }
             /**
              * <summary>
              * This constructor takes two paramaters: face and suit to instantiate a Card object
              * </summary>
              * 
              * @constructor Card
-             * @ param {int} face
-             * @ param {string} suit
+             * @ param {Faces} face
+             * @ param {Suits} suit
              */
-        public Card(int face, string suit)
+        public Card(Faces face, Suits suit)
         {
             this.Face = face;
             this.Suit = suit;
